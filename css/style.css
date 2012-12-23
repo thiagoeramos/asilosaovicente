@@ -1,0 +1,842 @@
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+   Definições  e normalização para leitura de HTML5
+   --------------------------------------------------------------------------------------------------------------------------------------*/
+*{
+        margin: 0;
+        padding: 0;
+        position: relative;      
+        z-index: 0;      
+        visibility: visible;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block;  }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+    Correções e prevenções de bugs para estrutura
+   ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+html { font-size: 100%; overflow: scroll; }
+body { margin: 0; font-size: 13px; line-height: 1.231; }
+body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+    Correções e prevenções de bugs para  Links
+----------------------------------------------------------------------------------------------------------------------------------------*/
+
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+    Correções e prevenções de bugs para Textos
+    ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+abbr[title] { border-bottom: 1px dotted; }
+b, strong { font-weight: bold; }
+blockquote { margin: 1em 40px; }
+dfn { font-style: italic; }
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+pre, code, kbd, samp { font-family: monospace, monospace; font-size: 1em; }
+pre { white-space: pre; white-space: pre-wrap;  }
+q { quotes: none; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 85%; }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+
+/*  ----------------------------------------------------------------------------------------------------------------------------------------
+     Correções e prevenções de bugs para Listas
+    ----------------------------------------------------------------------------------------------------------------------------------------  */
+
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+dd { margin: 0 0 0 40px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+
+/*  ----------------------------------------------------------------------------------------------------------------------------------------
+  Correções e prevenções de bugs para conteúdos embedados como imagens figuras e videos ou animações flash
+   ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+img { border: 0;vertical-align: middle; }
+svg:not(:root) { overflow: hidden; }
+figure { margin: 0; }
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+  Correções e prevenções de bugs para formulários
+   ----------------------------------------------------------------------------------------------------------------------------------------*/
+
+form { margin: 0; }
+fieldset { border: 0; margin: 0; padding: 0; }
+label { cursor: pointer; }
+legend { border: 0; margin-left: -7px; padding: 0; }
+button, input, select, textarea { font-size: 100%; margin: 0; vertical-align: baseline; vertical-align: middle; }
+button, input { line-height: normal;overflow: visible; }
+table button, table input { overflow: auto; }
+button, input[type="button"], input[type="reset"], input[type="submit"] { cursor: pointer;}
+
+input[type="checkbox"], input[type="radio"] { box-sizing: border-box; }
+
+textarea { overflow: auto; vertical-align: top; resize: vertical; }
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------------------
+  Correções e prevenções de bugs para tabelas
+   ---------------------------------------------------------------------------------------------------------------------------------------- */
+
+table { border-collapse: collapse; border-spacing: 0; }
+td { vertical-align: top; }
+
+
+/*  ----| Informações sobre o desenvolvedor | ------------------------------------------------------------------------------------
+   Autor: Thiago Ramos & Danila Ramos
+   Fones: 11 8703-2833
+   E-mail: thiagomvnew@gmail.com;danilaregina@gmail.com
+   Horários: Segunda a Sexta das 9:00 as 18:00
+   ---------------------------------------------------------------------------------------------------------------------------------------- */ 
+
+/* ----| Classes  para ajuda na formatação e semântica |-------------------------------------------------------------------*/
+
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
+/* ----| Formatação para leitores de tela  |------*/
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0,0,0,0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { clear: both; }
+
+
+
+/* ---| Formatação  condicional para diversos tamanhos de telas |--------------------------------------------------*/
+
+@media only screen and (min-width: 480px) {
+  /* estilos para telas abaixo de 480px de largura */
+
+}
+
+@media only screen and (min-width: 768px) {
+  /* estilos para telas abaixo de 768px de largura */
+
+}
+
+
+
+/* ===================================================================================================*/
+
+/* ---| Estilos para exibição do conteúdo -  |--------------------------------------------------------------------------- */
+ @font-face {
+    font-family: 'Frutiger 57Cn';
+    src: url('../_fontes/Frutiger57Condensed.eot');
+    src: url('../_fontes/Frutiger57Condensed.eot?#iefix') format('embedded-opentype'),
+         url('../_fontes/Frutiger57Condensed.woff') format('woff'),
+         url('../_fontes/Frutiger57Condensed.ttf') format('truetype'),
+         url('../_fontes/Frutiger57Condensed.svg#Frutiger57Cn') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+ @font-face {
+    font-family: 'BigNoodle Titling';
+    src: url('../_fontes/big_noodle_titling.eot');
+    src: url('../_fontes/big_noodle_titling.eot?#iefix') format('embedded-opentype'),
+         url('../_fontes/big_noodle_titling.woff') format('woff'),
+         url('../_fontes/big_noodle_titling.ttf') format('truetype'),
+         url('../_fontes/big_noodle_titling.svg#BigNoodle Titling') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'Chistopherhand';
+	src: url('../_fontes/comesinhandy.eot'); /* IE9 Compat Modes */
+	src: url('../_fontes/comesinhandy.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+	     url('../_fontes/comesinhandy.woff') format('woff'), /* Modern Browsers */
+	     url('../_fontes/comesinhandy.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('../_fontes/comesinhandy.svg#Chistopherhand') format('svg'); /* Legacy iOS */
+	}
+body{
+  background: url('../img/bg_new_salmon.png') top center repeat-x #fbfbfb;
+  font-family: Tahoma;
+  
+}
+section hgroup{	
+	color: #3f0f5a;
+	text-align: center;
+	float: left;display: table;
+}
+header h1{
+  margin-top: 20px;  letter-spacing: 6px;
+  
+}	
+
+#container{
+	width:989px;
+	height:auto;
+	position:relative;	
+	margin:0 auto;
+}
+
+#main{
+	width:990px;
+	height: auto;
+	float: left;
+    display: table;
+ 
+}
+
+/*-------------------------------------------------------- 
+ ------------------ HOME ----------------------------- */
+section#intro{	
+	display:table;
+	position:relative;
+}
+section#intro #houseContent {
+   	width:990px;
+	height: auto;
+	float: left;
+    display: table;
+ }
+ section#intro #houseContent #animation{
+width:100%; height:100%; margin-top: -170px; margin-left: 0px; z-index: 0; 
+ }
+
+
+section#intro hgroup {	
+font:normal 17px 'Frutiger 57Cn';
+}
+section#intro  header{	
+	width:500px;
+	height: 74px;	
+	margin-left: 21px;
+	margin-top: 110px;
+}
+
+section#intro header h2{
+  font-size: 8pt;
+  letter-spacing: 12px;
+  margin: 0;
+}
+section#content{
+        display: none;
+        float:left; top:0px;
+}
+
+section#content hgroup{
+	font:normal 10px 'Frutiger 57Cn';
+	background: url('../img/logo.png') no-repeat left top;
+	height:144px;	
+	padding-left: 100px;
+
+}
+section#content  header{	
+	width:600px;
+	height:144px;	
+	margin-left: 21px;
+	margin-top: 13px;
+	float: left;	
+}
+
+section#content  header h2{
+	font-size: 6pt;
+  letter-spacing: 10px;
+  margin: 0;
+}
+
+/*-------------------------------------------------------- 
+------------------ GERAL ----------------------------- */
+.opacity69{
+        opacity: 0.60;      
+        filter:alpha(opacity=60);
+
+}
+.opacity89{
+        opacity:0.89;      
+        filter:alpha(opacity=89);
+}
+
+.alert_noscript{
+        left: 0px;
+        right:0px;
+        top:0px;
+        bottom: 0px;
+ 
+                z-index: +9;
+                position: fixed;
+}
+.alert_noscript p{
+        background:red;
+        padding:10px;
+        color: white;
+       text-align: center;
+}
+.overlay_lightbox{
+	position:fixed;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	z-index:+3;
+	background:url('../img/pattern.png');
+	display: none;                 
+}
+.loader{
+	position:absolute;
+	width:300px;
+	height:100px;
+	margin-top:300px;
+	left:45%;
+	z-index:+5;	
+	font-size:20px;
+	display:none;
+
+}
+.loader img{ float:left;}
+
+section#intro article{
+width:100px;
+margin:5px;
+float:left;
+}
+
+.borderSh{
+	border-radius: 10px;		
+	box-shadow: -1px 3px 5px #d19c88;
+}
+.border{
+	
+	border-radius: 10px;	
+	box-shadow: -1px 1px 1px #d19c88;
+        
+	
+	
+}
+.behavior{
+	
+	behavior: url('http://www.redxtape.com.br/asv/css/PIE.htc');
+}
+.navStyles{
+	text-decoration: none;
+	color: #450f51;	
+	letter-spacing:4px;	
+}
+.navStyles:hover{
+	color: #dba38d;
+}
+img.flooreffect{
+  position:absolute;
+bottom: -130px;
+  z-index: -1;
+  left:200px;
+  z-index: -1;
+  margin-top:-40px;
+  left:170px;
+ }
+ .margMin{
+		margin-bottom:10px;
+		position:absolute;
+		bottom:0;
+}
+.margMore{
+		margin-top:40px;
+		position:absolute;
+		top:0;
+}
+.shadow_Footer{
+    position: absolute; bottom:-40px;  left:0px;
+    
+}
+
+.box_destaque{
+	background: #ddcde8;
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+        display: table;
+	padding: 10px;
+	margin: 5px;
+}
+.box_destaque img{
+    float: left;
+    width: auto;
+    max-width: 200px;
+}
+
+.lightbox{
+        
+        background: #efcceb;
+        padding: 30px;        
+        border-radius: 10px;
+	
+	box-shadow: -1px 3px 5px #45423d;
+
+        
+	display: none;
+	bottom: 0px;	
+	height:auto;
+        max-height: 500px;
+	float: left;
+	width: auto;
+        max-width: 600px;
+        
+	z-index: +8;	
+	position: fixed;
+	bottom:0px;
+	left:50%;
+	margin-left: -200px;
+        margin-top:0px;
+	
+}
+
+.lightbox h3{
+	font-size: 20px;
+	margin: 5px;
+	float: left;
+        cursor: move;
+        color: #7f3876;
+        
+}
+a.close{
+        float:right;
+        border-radius: 100px;
+        background: #5b0847;
+        padding: 10px;
+         font-size: 20px;
+        color: #af4f97;
+        text-decoration: none;
+        position: absolute;
+        right:-20px;
+        top:-20px;
+        
+}
+a.close:hover{
+        background: #eac3e0;
+        border: 1px solid #af4f97;
+        color: #5b0847;
+}
+
+/* --- MENÚ PARA MINIATURAS----------------------------------------------------------*/
+section#content #main #content_pages nav#thumbs{
+        background: #707070;       
+        height: 70px;
+        padding-top: 10px;
+        border-radius: 10px;
+        overflow: hidden;
+        max-width: 100%;
+        max-height: 70px;
+}
+iframe{
+	background:none;
+	overflow:hidden;
+	border:0px;
+	height:400px;
+	width:600px;
+}
+/* --- SUBMENÚ ----------------------------------------------------------*/
+section#content #main #content_pages nav#submenu{
+        background: #f1ddf1;       
+        height: 30px;
+        padding-top: 10px;
+        border-radius: 10px;
+        border: 1px solid #b963b8;
+}
+
+
+/* --- MENU PRINCIPAL----------------------------------------------------------*/
+section#content #main nav#menu{
+	width:210px;
+	height:220px;
+	left:0px;
+	z-index:2;
+	margin-top:20px;
+	bottom:0px;
+	background: url('../img/flooreffect.png') bottom left #efe3de;
+        
+	position:absolute;
+}
+#navegacao_principal{
+        position: absolute; bottom: 0px; z-index: 2; left:0px;top:100%;
+}
+section#content #main nav#menu ul {	
+	width:210px;
+	height:220px;
+	padding-top: 15px;
+	padding-left: 10px;
+
+}
+section#content #main nav#menu ul li{
+	padding: 5px;
+	margin-top: 5px;
+	width:170px;
+	height: 15px;	
+	margin: 0;
+}
+section#content #main nav#menu ul li a{
+	font:bold 13px 'Tahoma';
+	border-bottom: 1px dotted #d19c88;
+	letter-spacing: 2px;
+	padding:inherit;
+	width:inherit;
+	height: inherit;	
+	margin: inherit;
+}
+
+
+/* -- ----------GALERIA DE IMAGENS -------------------------------------------------------- */
+
+section#content #main article.galeria{
+	width:95%;
+	height:400px;
+	margin-left:25px;
+	float:left;
+	position:relative;
+	border:5px solid white;	
+       
+}
+section#content #main article.galeria>figure img{ 
+                  z-index: 0;
+		position:absolute;
+		overflow:hidden;
+		height:auto;
+		max-height:400px;
+                min-height: 400px;
+		width:100%;       
+}
+section#content #main article.galeria ul li{
+ display:inline;
+ float:left;
+ margin-right:5px;
+}
+section#content #main article.galeria ul li a img{
+                border:0px;
+                width:50px;
+                height:50px;
+                border:2px solid white;
+}
+section#content #main article.galeria ul{
+  padding:0px;
+  margin:5px;
+  display:none;
+}
+
+
+/* ------------------ TELA INICIAL ----------------------------- */
+
+
+section#content #main article#galeria_principal{
+background:url('../img/logo.png') no-repeat center center;
+}
+section#content #main article#galeria_principal nav#thumbs{
+	float: right;
+	z-index:2;
+	right:-30px;
+	bottom:0px;	
+	position:relative;
+	padding-bottom:3px;
+}
+
+/*-------------------------------------------------------------- 
+------------------ QUEM SOMOS ----------------------------- */
+section#content #main article#content_pages{
+background:url('../img/logo.png') no-repeat center center transparent;
+
+}
+
+section#content #main article#content_pages nav{
+	float: right;
+	z-index:2;
+	right:-30px;
+	bottom:0px;	
+	padding: 0px;
+	margin-top: 20px;
+        height: auto;
+        display: none;
+        position:relative;
+        overflow: hidden;
+        width: auto;
+}
+
+section#content #main .galeria nav ul {
+	padding:0px;
+	top:0px;
+	margin: 0px;
+	bottom:0px;	
+	width:auto;
+    
+	height:inherit;
+        display: none;
+	float: left;
+	z-index:2;
+	
+
+}
+section#content #main .galeria nav:before{
+        content: "<";
+        float: left;
+        font-size: 30px;
+        margin-top: 10px;
+        cursor: pointer;
+}
+section#content #main .galeria nav ul:after{
+       content: ">";
+       float: left;
+       font-size: 30px;
+       margin-top: 10px;
+       cursor: pointer;
+}
+section#content #main .galeria nav ul li{
+	padding: 5px;
+	margin-top: 5px;
+	width:auto;
+	height: 25px;	
+	margin: 0;
+	display:inline;
+	float:left;
+}
+section#content #main .galeria nav ul li a{
+	font:bold 13px 'Tahoma';
+	padding:inherit;
+	width:inherit;
+	height: inherit;	
+	margin: inherit;
+}
+section#content #main #content_pages .overlay{
+		background: url('../img/bg_light.png') left center #ffffff;
+                right:0px;
+                left: 0px;
+                top:0px;
+                bottom: 0px;
+		position:absolute;
+	
+}
+section#content #main #content_pages div.info{
+	width:680px; height:auto;		
+	display:none;	
+	background: #ffffff;		
+	float:left;
+	margin-left:200px;
+      	padding:20px;	
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:12px;
+	color:#5c1a6b;
+        
+	
+}
+section#content #main #content_pages div.info header{
+        margin-bottom: 5px;
+        height: 20px;
+        width:auto;
+        padding: 0px;
+        
+}
+section#content #main #content_pages div.info header h1{
+        padding-top: 5px;
+        font-size: 25px;
+        padding-bottom: 5px;
+        margin-top: -8px;
+        margin-bottom: 5px;
+        margin-left: -15px;
+        
+        width: 500px;
+        background: url('../img/sombra_pink.png') no-repeat left 18px;
+       
+}
+section#content #main #content_pages div.info article#scrollText{
+	width:98%;
+	height:auto;	
+	max-height:270px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	padding:5px;
+	
+}
+section#content #main #content_pages div.info article#scrollText p{
+	line-height:20px;
+	margin-bottom:10px;
+        
+}
+
+section#content #main #content_pages div.info article#scrollText ol{
+	list-style:circle;	
+          line-height: 20px;
+}
+section#content #main #content_pages div.info #scroller{
+	position:absolute;
+	width:20px;
+	height:20px;
+	right:-5px;
+	display:none;
+          line-height: 10px;
+}
+
+/*-------------------------------------------------------------- 
+------------------ QUEM SOMOS/PRESIDENTES ----------------------------- */
+section#content #main #content_pages div.info .banner_presidentes{       
+        margin-top:100px;
+        left:240px;
+        position: absolute;
+        	opacity: 0.79;	
+		filter:alpha(opacity=79);             
+}
+section#content #main #content_pages div.info .banner_presidentes img{        	
+                width: 100px;
+                margin-top:-20px;
+                float: left;
+        
+}
+section#content #main #content_pages div.info .banner_presidentes p{
+        font:normal 25px 'Chistopherhand';
+        line-height: 25px;
+        float: right;
+        color:#610e37;
+        top:0px;
+        margin-top: 30px;
+        position: relative;
+        width:auto;      
+        letter-spacing: 6px;
+       
+  
+}
+section#content #main #content_pages div.info .banner_presidentes p strong{
+    font:normal 57px 'Chistopherhand';
+     color: #c044f9;
+
+}
+
+/*-------------------------------------------------------------- 
+------------------ QUEM SOMOS/BAZAR ----------------------------- */
+section#content #main #content_pages div.info article#scrollText .banner_bazar{       
+          margin-top:10px;    
+        	opacity: .79;	
+		filter:alpha(opacity=79);
+                margin: 0 auto;
+                width: 450px;
+}
+section#content #main #content_pages div.info article#scrollText .banner_bazar img{        	
+                width: 100px;
+                margin-top:0px;
+                float: left;
+        
+}
+section#content #main #content_pages div.info article#scrollText .banner_bazar p{
+        font:normal 25px 'Chistopherhand';
+        line-height: 25px;
+        float: right;
+        color:#610e37;
+        top:0px;
+        margin-top: 30px;
+        position: relative;
+        width:auto;   
+        letter-spacing: 6px;
+       
+  
+}
+section#content #main #content_pages div.info article#scrollText .banner_bazar p strong{
+    font:normal 57px 'Chistopherhand';
+     color: #c044f9;
+
+}
+
+/*-------------------------------------------------------------- 
+------------------ DOAÇÕES ----------------------------- */
+section#content #main #content_pages div.info article#scrollText #iconForm{
+	width:auto;
+	padding: 6px;
+	background: #d4b8e7;
+	border-radius: 10px;	
+	color:#6e3e90;
+	text-decoration: none;
+	font-size: 15px;
+        margin:6px;
+       
+}
+.forms table tr {
+	padding:2px;
+	margin:3px;
+}
+.forms table tr:last-child>td {
+text-align:right;
+}
+.forms table tr td{
+	padding:4px;
+	margin:2px;
+	width:100px;
+}
+.forms table tr td input.bt{
+	border: 1px solid #d7a5fa;
+	width: 100px;
+	color: #cdbada;
+	font-weight: bold;
+	padding: 5px 10px 5px 10px;
+	box-sizing: border-box;
+        background: #818181;
+        height: 40px;
+        width: auto;
+        padding: 6px;
+}
+.forms table tr{
+	height:40px;
+	font-size: 16px;
+}
+.forms table tr td input{
+	height: 25px;
+}
+.forms  form table tr td textarea{
+	height: 100px;
+}
+
+.forms table tr td input[type=text],.forms table tr td textarea{
+	border: 1px solid #d7a5fa;
+	width: 400px;
+	color: #cdbada;
+	font-weight: bold;
+	padding: 5px 10px 5px 10px;
+	box-sizing: border-box;
+}
+.forms table tr td input:hover,.forms table tr td input:active,.forms table tr td input:focus,
+.forms table tr td textarea:hover,.forms table tr td textarea:active,.forms table tr td textarea:focus{
+	border: 1px solid #ba7ee3;
+	background: #cdbada;	
+	color: #ffffff;
+}
+
+/*-------------------------------------------------------------- 
+------------------ EVENTOS ----------------------------- */
+p.chamada_evento{
+float: left; width:300px; height: auto; margin-top: 30px; font-weight: bold;
+}
+
+/*-------------------------------------------------------------- 
+------------------ GALERIA DE FOTOS ----------------------------- */
+
+
+/*-------------------------------------------------------------- 
+------------------ RODAPÉ ----------------------------- */
+
+footer{
+	font:bold 11px 'Frutiger 57Cn';
+	width:200px;
+	clear:both;
+	width:100%;
+	padding:10px;
+}
+footer p{
+	margin-top:30px;
+	text-align:right;
+	margin-right:20px;
+        float: right;
+
+}
+footer p a{
+        float:right;
+}
